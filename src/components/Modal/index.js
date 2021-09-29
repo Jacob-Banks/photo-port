@@ -1,20 +1,17 @@
 import React from "react";
 
-function Modal({ onClose, currentPhoto }) {
+function Modal({ currentPhoto }) {
   const { name, category, description, index } = currentPhoto;
-
   return (
     <div className="modalBackdrop">
       <div className="modalContainer">
-        <h3 className="modalTitle">{name}</h3>
+        <h3 className="modalTitle">Photo Name</h3>
         <img
           src={require(`../../assets/large/${category}/${index}.jpg`).default}
           alt="current category"
         />
-        <p>{description}</p>
-        <button onClick={onClose} type="button">
-          Close this modal
-        </button>
+        <p>Photo Description</p>
+        <button type="button">Close this modal</button>
       </div>
     </div>
   );
